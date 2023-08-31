@@ -7,23 +7,19 @@
 
 import Foundation
 
-//struct AllHighSchools: Codable, Sendable {
-//    let highSchools: [HighSchool]
-//}
-
 // I created a model of all components of the School in case we need that in the futuare, but we could do some of them!
 struct HighSchool: Identifiable, Codable, Sendable {
     var id: UUID { UUID() }
     
     let dbn: String?
-    let school_name: String?
+    let school_name: String
     let boro: String?
     let overview_paragraph: String?
     let school_10th_seats: String?
     let academicopportunities1: String?
     let academicopportunities2: String?
     let ell_programs: String?
-    let neighborhood: String?
+    let neighborhood: String
     let building_code: String?
     let location: String?
     let phone_number: String?
@@ -77,4 +73,7 @@ struct HighSchool: Identifiable, Codable, Sendable {
     let bbl: String?
     let nta: String?
     let borough: String?
+    
+    // This mock data just for the preview but it's not a requared!
+    static let MOCK_DATA = HighSchool(dbn: nil, school_name: "NYC School", boro: nil, overview_paragraph: nil, school_10th_seats: nil, academicopportunities1: nil, academicopportunities2: nil, ell_programs: nil, neighborhood: "Downtown", building_code: nil, location: nil, phone_number: nil, fax_number: nil, school_email: nil, website: nil, subway: nil, bus: nil, grades2018: nil, finalgrades: nil, total_students: nil, extracurricular_activities: nil, school_sports: nil, attendance_rate: nil, pct_stu_enough_variety: nil, pct_stu_safe: nil, school_accessibility_description: nil, directions1: nil, requirement1_1: nil, requirement2_1: nil, requirement3_1: nil, requirement4_1: nil, requirement5_1: nil, offer_rate1: nil, program1: nil, code1: nil, interest1: nil, method1: nil, seats9ge1: nil, grade9gefilledflag1: nil, grade9geapplicants1: nil, seats9swd1: nil, grade9swdfilledflag1: nil, grade9swdapplicants1: nil, seats101: nil, admissionspriority11: nil, admissionspriority21: nil, admissionspriority31: nil, grade9geapplicantsperseat1: nil, grade9swdapplicantsperseat1: nil, primary_address_line_1: nil, city: nil, zip: nil, state_code: nil, latitude: nil, longitude: nil, community_board: nil, council_district: nil, census_tract: nil, bin: nil, bbl: nil, nta: nil, borough: nil)
 }

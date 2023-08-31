@@ -16,7 +16,7 @@ actor APICall {
         guard let url = URL(string: APIConstants.schoolsAPI) else { throw APIError.invalidURL }
         
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let (data, _) = try? await URLSession.shared.data(from: url) else { throw APIError.inavlidData }
             let decoder = JSONDecoder()
             
             let decodedData = try decoder.decode([HighSchool].self, from: data)

@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class MainViewViewModel: ObservableObject {
     @Published private(set) var highSchools = [HighSchool]()
     

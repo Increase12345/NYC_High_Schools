@@ -12,4 +12,6 @@ struct APIConstants {
     
     // Base constans
     static let schoolsAPI = "https://data.cityofnewyork.us/resource/s3k6-pzi2.json"
+    
+    static let schoolImageURL = "https://east.dpsk12.org/wp-content/uploads/sites/98/East_Logo_Tertiary.png"
 }
