@@ -3,7 +3,7 @@
 
 <h3 align="center">Demo Video</h3>
 
-![](Netflix.gif)
+![](0.gif)
 
 <h3 align="center">Demo Screenshots</h3>
 
