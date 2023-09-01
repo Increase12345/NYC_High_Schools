@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject private var vm = MainViewViewModel()
+    @State var tr = ""
     
     var body: some View {
         
@@ -19,12 +20,16 @@ struct MainView: View {
             List {
                 ForEach(vm.highSchools) { school in
                     NavigationLink {
-                        
+                        DetailView(school: school)
                     } label: {
                         SchoolCellRowView(school: school)
                     }
                 }
+                .listRowSeparator(.hidden)
             }
+            .listStyle(.plain)
+            
+            .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("NYC Schools")
         }
     }

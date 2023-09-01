@@ -8,13 +8,40 @@
 import SwiftUI
 
 struct DetailView: View {
+    let school: HighSchool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            
+            poster
+            
+            title
+            
+            VStack(alignment: .leading, spacing: 15) {
+                
+                schoolTabDetails
+              
+                Divider()
+                
+                schoolOverview
+                
+                Divider()
+                
+                satScores
+                
+                Divider()
+                
+                schoolAddress
+                
+            }
+            .padding(.horizontal)
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(school: .MOCK_DATA)
     }
 }

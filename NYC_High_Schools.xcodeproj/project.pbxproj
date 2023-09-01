@@ -19,6 +19,8 @@
 		4067B3952AA1323700DFCFD0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067B3942AA1323700DFCFD0 /* DetailView.swift */; };
 		4067B3982AA1337D00DFCFD0 /* SchoolCellRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067B3972AA1337D00DFCFD0 /* SchoolCellRowView.swift */; };
 		4067B39B2AA1365000DFCFD0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4067B39A2AA1365000DFCFD0 /* Kingfisher */; };
+		4067B3A22AA1725700DFCFD0 /* DetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067B3A12AA1725700DFCFD0 /* DetailExtension.swift */; };
+		4067B3A62AA1771500DFCFD0 /* SATScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067B3A52AA1771500DFCFD0 /* SATScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		4067B3902AA12D3B00DFCFD0 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		4067B3942AA1323700DFCFD0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4067B3972AA1337D00DFCFD0 /* SchoolCellRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCellRowView.swift; sourceTree = "<group>"; };
+		4067B3A12AA1725700DFCFD0 /* DetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExtension.swift; sourceTree = "<group>"; };
+		4067B3A52AA1771500DFCFD0 /* SATScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				4067B3882AA127BD00DFCFD0 /* HighSchools.swift */,
+				4067B3A52AA1771500DFCFD0 /* SATScore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				4067B3942AA1323700DFCFD0 /* DetailView.swift */,
+				4067B3A12AA1725700DFCFD0 /* DetailExtension.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -225,11 +231,13 @@
 				4067B3892AA127BD00DFCFD0 /* HighSchools.swift in Sources */,
 				4067B3952AA1323700DFCFD0 /* DetailView.swift in Sources */,
 				4067B3752AA1260100DFCFD0 /* NYC_High_SchoolsApp.swift in Sources */,
+				4067B3A62AA1771500DFCFD0 /* SATScore.swift in Sources */,
 				4067B3982AA1337D00DFCFD0 /* SchoolCellRowView.swift in Sources */,
 				4067B3912AA12D3B00DFCFD0 /* MainViewViewModel.swift in Sources */,
 				4067B38F2AA12BB800DFCFD0 /* APIConstants.swift in Sources */,
 				4067B38B2AA12AA900DFCFD0 /* APICall.swift in Sources */,
 				4067B38D2AA12B8E00DFCFD0 /* APIError.swift in Sources */,
+				4067B3A22AA1725700DFCFD0 /* DetailExtension.swift in Sources */,
 				4067B3862AA1266C00DFCFD0 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
