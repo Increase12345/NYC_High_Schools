@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
+    @StateObject var vm = DetailViewViewModel()
     let school: HighSchool
     
     var body: some View {
@@ -36,6 +37,10 @@ struct DetailView: View {
             }
             .padding(.horizontal)
             .navigationBarTitleDisplayMode(.inline)
+            .task {
+                await vm.fetchAllSATScores()
+                vm.defineSatScoreOfSchool(schoolName: school.school_name)
+            }
         }
     }
 }

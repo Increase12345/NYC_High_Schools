@@ -7,7 +7,7 @@
 
 import Foundation
 
-// I created a model of all components of the School in case we need that in the futuare, but we could do some of them!
+// I created a model of all components of the School in case we need that in the futuare, but we could do some of them! Also signed to Sendable protocor, even if structs are value type and they are thread safe we still can mark it as Sendable for the slight perfomance
 struct HighSchool: Identifiable, Codable, Sendable {
     var id: UUID { UUID() }
     

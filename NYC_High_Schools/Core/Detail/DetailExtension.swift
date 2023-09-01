@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension DetailView {
+    
     var poster: some View {
         Image("students")
             .resizable()
@@ -24,6 +25,7 @@ extension DetailView {
                 .foregroundColor(.secondary)
                 .bold()
         }
+        .padding()
     }
     
     var schoolTabDetails: some View {
@@ -62,10 +64,16 @@ extension DetailView {
         VStack(alignment: .leading, spacing: 5) {
             Text("SAT Scores")
                 .font(.title2.bold())
-            Text("Number of takers: **\("43")**")
-            Text("Critical reading score: **\("223")**")
-            Text("Math score: **\("467")**")
-            Text("Writing score: **\("143")**")
+            
+            if let scores = vm.satScoreOfSchool {
+                Text("Number of takers: **\(scores.num_of_sat_test_takers)**")
+                Text("Critical reading score: **\(scores.sat_critical_reading_avg_score)**")
+                Text("Math score: **\(scores.sat_math_avg_score)**")
+                Text("Writing score: **\(scores.sat_writing_avg_score)**")
+            } else {
+                Text("Scores are not available!")
+                    .foregroundColor(.secondary)
+            }
         }
     }
 }

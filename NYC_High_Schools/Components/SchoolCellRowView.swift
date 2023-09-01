@@ -32,8 +32,9 @@ struct SchoolCellRowView: View {
                 
             VStack(alignment: .leading) {
                 Text(school.school_name)
-                    .font(.title3.bold())
+                    .bold()
                 Text(school.neighborhood)
+                    .font(.subheadline)
                     .foregroundColor(.secondary)
             }
             .multilineTextAlignment(.leading)

@@ -21,6 +21,7 @@
 		4067B39B2AA1365000DFCFD0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4067B39A2AA1365000DFCFD0 /* Kingfisher */; };
 		4067B3A22AA1725700DFCFD0 /* DetailExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067B3A12AA1725700DFCFD0 /* DetailExtension.swift */; };
 		4067B3A62AA1771500DFCFD0 /* SATScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067B3A52AA1771500DFCFD0 /* SATScore.swift */; };
+		4067B3A82AA179D900DFCFD0 /* DetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4067B3A72AA179D900DFCFD0 /* DetailViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4067B3972AA1337D00DFCFD0 /* SchoolCellRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCellRowView.swift; sourceTree = "<group>"; };
 		4067B3A12AA1725700DFCFD0 /* DetailExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExtension.swift; sourceTree = "<group>"; };
 		4067B3A52AA1771500DFCFD0 /* SATScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATScore.swift; sourceTree = "<group>"; };
+		4067B3A72AA179D900DFCFD0 /* DetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				4067B3942AA1323700DFCFD0 /* DetailView.swift */,
+				4067B3A72AA179D900DFCFD0 /* DetailViewViewModel.swift */,
 				4067B3A12AA1725700DFCFD0 /* DetailExtension.swift */,
 			);
 			path = Detail;
@@ -238,6 +241,7 @@
 				4067B38B2AA12AA900DFCFD0 /* APICall.swift in Sources */,
 				4067B38D2AA12B8E00DFCFD0 /* APIError.swift in Sources */,
 				4067B3A22AA1725700DFCFD0 /* DetailExtension.swift in Sources */,
+				4067B3A82AA179D900DFCFD0 /* DetailViewViewModel.swift in Sources */,
 				4067B3862AA1266C00DFCFD0 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
