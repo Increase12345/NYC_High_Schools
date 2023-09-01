@@ -20,10 +20,10 @@ extension DetailView {
     //MARK: Title
     var title: some View {
         VStack {
-            Text(school.school_name)
+            Text(vm.school.school_name)
                 .multilineTextAlignment(.center)
                 .font(.title.bold())
-            Text(school.neighborhood)
+            Text(vm.school.neighborhood)
                 .foregroundColor(.secondary)
                 .bold()
         }
@@ -36,13 +36,13 @@ extension DetailView {
             VStack {
                 Text("Total students")
                     .foregroundColor(.secondary)
-                Text(school.total_students)
+                Text(vm.school.total_students)
             }
             Spacer()
             VStack {
                 Text("Final grades")
                     .foregroundColor(.secondary)
-                Text(school.finalgrades)
+                Text(vm.school.finalgrades)
             }
         }
     }
@@ -52,16 +52,16 @@ extension DetailView {
         VStack(alignment: .leading, spacing: 5) {
             Text("About")
                 .font(.title2.bold())
-            Text(school.overview_paragraph)
+            Text(vm.school.overview_paragraph)
         }
     }
     
     //MARK: SchoolAdress
     var schoolAddress: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text("**Address:** \(school.fullAdress)")
-            Text("**Tel:** \(school.phone_number)")
-            Text("**Website:** \(school.website)")
+            Text("**Address:** \(vm.school.fullAdress)")
+            Text("**Tel:** \(vm.school.phone_number)")
+            Text("**Website:** \(vm.school.website)")
         }
     }
     

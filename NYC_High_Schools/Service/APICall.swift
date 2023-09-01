@@ -12,7 +12,7 @@ import Foundation
 actor APICall {
     static let shared = APICall()
     
-    init() { }
+    private init() { }
     
     // Fetching All list of schools
     func fetchHighSchools() async throws -> [HighSchool] {

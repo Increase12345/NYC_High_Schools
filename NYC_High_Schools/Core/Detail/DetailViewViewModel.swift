@@ -13,14 +13,24 @@ class DetailViewViewModel: ObservableObject {
     @Published private(set) var allListOfSATScores = [SATScore]()
     @Published private(set) var satScoreOfSchool: SATScore?
     
-    var tasks: [Task<Void, Error>?] = []
+    let school: HighSchool
+    
+    private var tasks: [Task<Void, Error>?] = []
     
     let apiCall = APICall.shared
     
+    init(school: HighSchool) {
+        self.school = school
+        fetchAllSATScores()
+    }
+    
     // Fetching all the SAT scores
-    func fetchAllSATScores() async {
-        if let list = try? await apiCall.fetchSATScore() {
-            self.allListOfSATScores = list
+    private func fetchAllSATScores() {
+        Task {
+            if let list = try? await apiCall.fetchSATScore() {
+                self.allListOfSATScores = list
+                defineSatScoreOfSchool(schoolName: school.school_name)
+            }
         }
     }
     
