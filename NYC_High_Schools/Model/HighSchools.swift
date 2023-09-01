@@ -74,6 +74,7 @@ struct HighSchool: Identifiable, Codable, Sendable {
     let nta: String?
     let borough: String?
     
+    // I created computed property just for easy use
     var fullAdress: String {
         "\(primary_address_line_1), \(city), \(zip)"
     }

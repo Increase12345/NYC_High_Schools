@@ -7,7 +7,6 @@
 
 import Foundation
 
-//MARK: APIErrors
 enum APIError: Error, LocalizedError {
     case invalidURL, serverError, inavlidData, unknown(Error)
     

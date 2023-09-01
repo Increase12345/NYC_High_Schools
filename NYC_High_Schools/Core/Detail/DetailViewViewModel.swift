@@ -17,15 +17,17 @@ class DetailViewViewModel: ObservableObject {
     
     let apiCall = APICall.shared
     
+    // Fetching all the SAT scores
     func fetchAllSATScores() async {
         if let list = try? await apiCall.fetchSATScore() {
             self.allListOfSATScores = list
         }
     }
     
+    // Getting specific school for our DetailView to display the score of selected school
     func defineSatScoreOfSchool(schoolName: String) {
         for score in allListOfSATScores {
-            if score.school_name == schoolName.uppercased() {
+            if score.schoolName == schoolName.uppercased() {
                 self.satScoreOfSchool = score
             }
         }

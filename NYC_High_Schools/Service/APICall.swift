@@ -7,7 +7,6 @@
 
 import Foundation
 
-//MARK: APICall Service
 // I'm using here Singelton just for the demo porpuses but we can use Dependency Injection so then we can have more flexible and stable code, there are many pluses with Dependency Injection and basics of them are: 1. Our Service claas is not gonna be global (its good for safety), 2. We can customize INIT, 3. We can swap out service. And another thing I'm using here an actor insted of class, to prevent dataracing, its a pretty new type which Apple released couple years ago, it's very handy to compare how we would hadle this issue before with GCD lock's. Also we could use Generic function in here so it would be only one method for both models.
 
 actor APICall {
@@ -31,12 +30,14 @@ actor APICall {
     }
     
     // Fetching SAT scores
+    // At this time I'm gonna use decodingStrategy just to show that we can play arround with json
     func fetchSATScore() async throws -> [SATScore] {
         guard let url = URL(string: APIConstants.SATScoreAPI) else { throw APIError.invalidURL }
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             
             let decodedData = try decoder.decode([SATScore].self, from: data)
             return decodedData

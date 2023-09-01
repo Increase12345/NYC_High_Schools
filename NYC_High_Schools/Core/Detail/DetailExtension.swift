@@ -9,6 +9,7 @@ import SwiftUI
 
 extension DetailView {
     
+    //MARK: Poster
     var poster: some View {
         Image("students")
             .resizable()
@@ -16,6 +17,7 @@ extension DetailView {
             .frame(maxWidth: .infinity)
     }
     
+    //MARK: Title
     var title: some View {
         VStack {
             Text(school.school_name)
@@ -28,6 +30,7 @@ extension DetailView {
         .padding()
     }
     
+    //MARK: SchoolTabDetails
     var schoolTabDetails: some View {
         HStack {
             VStack {
@@ -44,6 +47,7 @@ extension DetailView {
         }
     }
     
+    //MARK: School overview
     var schoolOverview: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text("About")
@@ -52,6 +56,7 @@ extension DetailView {
         }
     }
     
+    //MARK: SchoolAdress
     var schoolAddress: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text("**Address:** \(school.fullAdress)")
@@ -60,16 +65,17 @@ extension DetailView {
         }
     }
     
+    //MARK: SAT Scores
     var satScores: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text("SAT Scores")
                 .font(.title2.bold())
             
             if let scores = vm.satScoreOfSchool {
-                Text("Number of takers: **\(scores.num_of_sat_test_takers)**")
-                Text("Critical reading score: **\(scores.sat_critical_reading_avg_score)**")
-                Text("Math score: **\(scores.sat_math_avg_score)**")
-                Text("Writing score: **\(scores.sat_writing_avg_score)**")
+                Text("Number of takers: **\(scores.numOfSatTestTakers)**")
+                Text("Critical reading score: **\(scores.satCriticalReadingAvgScore)**")
+                Text("Math score: **\(scores.satMathAvgScore)**")
+                Text("Writing score: **\(scores.satWritingAvgScore)**")
             } else {
                 Text("Scores are not available!")
                     .foregroundColor(.secondary)

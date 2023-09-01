@@ -7,7 +7,6 @@
 
 import Foundation
 
-//MARK: APIConstants
 struct APIConstants {
     
     // Base constans

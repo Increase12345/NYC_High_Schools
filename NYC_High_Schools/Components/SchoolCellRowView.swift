@@ -13,7 +13,6 @@ struct SchoolCellRowView: View {
     
     var body: some View {
         
-        //MARK: SchoolRow
         HStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
@@ -33,6 +32,7 @@ struct SchoolCellRowView: View {
             VStack(alignment: .leading) {
                 Text(school.school_name)
                     .bold()
+                
                 Text(school.neighborhood)
                     .font(.subheadline)
                     .foregroundColor(.secondary)

@@ -11,6 +11,7 @@ struct DetailView: View {
     @StateObject var vm = DetailViewViewModel()
     let school: HighSchool
     
+    // I created here an Extension for this view just because even Apple use this technique on WWDC, but there are different ways to implement code in here
     var body: some View {
         ScrollView {
             
